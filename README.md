@@ -1,5 +1,11 @@
 # Astro Starter Kit: Basics
 
+TODO:
+
+- [ ] Toggle Dark Mode and Light Mode
+- [ ] Smooth Scroll
+- [ ]
+
 ```sh
 pnpm create astro@latest -- --template basics
 ```
