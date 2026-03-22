@@ -11,20 +11,10 @@
 .bg-mesh {
   background-color: #f1f3f4;
   background-image:
-    radial-gradient(
-      circle at 20% 0%,
-      hsla(236, 77%, 74%, 0.35) 3.1210986267166043%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 53.53001780898573% 1.0414296134208607%,
-      hsla(186, 77%, 74%, 0.35) 3.7491454641667024%,
-      transparent 59.72072481800893%
-    ),
-    radial-gradient(
-      circle at 95.9782826153375% 10.795065860042047%,
-      hsla(127, 77%, 74%, 0.35) 3.1210986267166043%,
-      transparent 26.85456528365227%
-    );
-  background-blend-mode: normal, normal, normal;
+    radial-gradient(at 20% 0%, hsla(236, 77%, 74%, 0.35) 0%, transparent 50%),
+    radial-gradient(at 54% 1%, hsla(186, 77%, 74%, 0.35) 0%, transparent 60%),
+    radial-gradient(at 96% 11%, hsla(127, 77%, 74%, 0.35) 0%, transparent 27%);
+  filter: blur(60px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
 }
