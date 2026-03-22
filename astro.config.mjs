@@ -11,5 +11,4 @@ export default defineConfig({
   adapter: netlify({
     excludeFiles: ["./node_modules/package/**/*", "./src/**/*.test.js"],
   }),
-  out,
 });
