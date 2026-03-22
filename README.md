@@ -1,52 +1,54 @@
-# Astro Starter Kit: Basics
+# Ridwan Muhammad Raihan — Portfolio
 
-TODO:
+Personal portfolio website built with Astro, Tailwind CSS, and deployed on Netlify.
 
-- [ ] Toggle Dark Mode and Light Mode
-- [ ] Smooth Scroll
-- [ ]
+**Live:** [ridwanmuh3.netlify.app](https://ridwanmuh3.netlify.com/)
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+## Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://astro.build/) v6 — Static site framework
+- [Tailwind CSS](https://tailwindcss.com/) v4 — Utility-first CSS
+- [TypeScript](https://www.typescriptlang.org/) — Strict mode
+- [Sharp](https://sharp.pixelplumbing.com/) — Image optimization
+- [Netlify](https://www.netlify.com/) — Deployment
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Single-page portfolio with Hero, About, Experiences, and Connect Links sections
+- Responsive mobile-first design
+- Mesh gradient background
+- Type-safe data-driven content
+- Optimized images via `astro:assets`
+- Open Graph meta tags
+
+## Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── favicon.svg
+│   └── favicon.ico
+├── src/
+│   ├── assets/images/       # Profile picture, icons
+│   ├── components/
+│   │   ├── layouts/         # Head, Footer
+│   │   ├── sections/        # Hero, About, Experiences, ConnectLinks
+│   │   └── ui/              # Experience, Project, ConnectLink
+│   ├── data/                # experiences.ts, connect-links.ts
+│   ├── layouts/             # Layout.astro
+│   ├── pages/               # index.astro, 500.astro
+│   ├── styles/              # global.css
+│   └── types/               # TypeScript interfaces
+├── astro.config.mjs
+├── tsconfig.json
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Commands
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command        | Action                                 |
+| :------------- | :------------------------------------- |
+| `pnpm install` | Install dependencies                   |
+| `pnpm dev`     | Start dev server at `localhost:4321`   |
+| `pnpm build`   | Build production site to `./dist/`     |
+| `pnpm preview` | Preview build locally before deploying |
