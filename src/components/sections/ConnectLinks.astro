@@ -1,0 +1,11 @@
+---
+import { connectLinksData } from "../../data/connect-links";
+import ConnectLink from "@components/ui/ConnectLink.astro";
+---
+
+<section>
+  <h1 class="font-bold mb-3">Let's Connect</h1>
+  <div class="space-y-3">
+    {connectLinksData.map((cl) => <ConnectLink {...cl} />)}
+  </div>
+</section>

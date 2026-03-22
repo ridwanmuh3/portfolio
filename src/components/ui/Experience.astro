@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import type { ExperienceObj } from "../../types";
+import redirectIcon from "@assets/images/redirect.svg";
+
+interface Props extends ExperienceObj {}
+
+const { duration, title, url, place, description, skills } = Astro.props;
+---
+
+<section>
+  <div class="flex flex-col sm:flex-row gap-1.5 md:gap-3 text-sm">
+    <div class="w-36 shrink-0">
+      <p class="text-nowrap text-neutral-500 pt-0.5 font-medium">{duration}</p>
+    </div>
+    <div class="space-y-1.5">
+      {
+        url ? (
+          <a
+            class="font-bold flex gap-2.5 items-center hover:underline"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>{title}</span>
+            <Image src={redirectIcon} alt="redirect" class="inline size-4" />
+          </a>
+        ) : (
+          <h2 class="font-bold">{title}</h2>
+        )
+      }
+      <h3 class="text-neutral-500 font-medium">{place}</h3>
+      <p class="text-neutral-700 leading-relaxed">
+        {description}
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        {
+          skills.map((skill) => (
+            <span
+              id={skill}
+              class="text-xs px-3 py-1 border rounded-full font-medium text-neutral-600 hover:bg-black hover:text-light-grey transition-colors duration-300 hover:border-black"
+            >
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

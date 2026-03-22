@@ -12,8 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vue": "^6.0.1",
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.8",
-    "vue": "^3.5.30"
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.2"
   }
 }

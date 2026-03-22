@@ -1,0 +1,13 @@
+---
+import Experience from "@components/ui/Experience.astro";
+import { experiencesData } from "../../data/experiences";
+---
+
+<section>
+  <div class="">
+    <h1 class="font-bold mb-3">Experiences</h1>
+    <div class="space-y-8">
+      {experiencesData.map((d) => <Experience {...d} />)}
+    </div>
+  </div>
+</section>

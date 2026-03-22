@@ -1,0 +1,34 @@
+---
+import type { ProjectObj } from "../../types";
+
+interface Props extends ProjectObj {}
+
+const { duration, title, description, skills } = Astro.props;
+---
+
+<section class="mb-8">
+  <div class="flex gap-4 text-sm">
+    <div class="w-36 shrink-0">
+      <p class="text-nowrap text-neutral-600 pt-0.5">{duration}</p>
+    </div>
+
+    <div>
+      <h2 class="font-bold text-base">{title}</h2>
+      <p class="mb-3 text-neutral-700 leading-relaxed">
+        {description}
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        {
+          skills.map((skill) => (
+            <span
+              id={skill}
+              class="text-xs px-3 py-1 border rounded-full font-medium text-neutral-600"
+            >
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

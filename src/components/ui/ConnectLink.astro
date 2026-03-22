@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import type { ConnectLinkObj } from "../../types";
+import redirectIcon from "@assets/images/redirect.svg";
+
+interface Props extends ConnectLinkObj {}
+const { name, url, alias } = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row gap-0.5 text-sm">
+  <p class="w-36 shrink-0 text-neutral-600 font-medium">{name}</p>
+  <a
+    class="text-sm font-medium flex gap-2.5 items-center hover:underline w-fit"
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>{alias}</span>
+    <Image src={redirectIcon} alt="redirect" class="inline size-4" />
+  </a>
+</div>
