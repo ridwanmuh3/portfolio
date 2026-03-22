@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Astro, Tailwind CSS, and deployed on Netlify.
 
-**Live:** [ridwanmuh3.netlify.app](https://ridwanmuh3.netlify.com/)
+**Live:** [ridwanmuh3.netlify.app](https://ridwanmuh3.netlify.app/)
 
 ## Tech Stack
 
