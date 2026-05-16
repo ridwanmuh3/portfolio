@@ -2,28 +2,33 @@ import type { ConnectLinkObj } from "../types";
 
 export const connectLinksData: ConnectLinkObj[] = [
   {
-    name: "Github",
+    name: "GitHub",
     alias: "@ridwanmuh3",
     url: "https://github.com/ridwanmuh3",
+    icon: "github",
   },
   {
-    name: "Linkedin",
+    name: "LinkedIn",
     alias: "Ridwan Muhammad Raihan",
     url: "https://www.linkedin.com/in/ridwan-muhammad-raihan-0b22a1249",
+    icon: "linkedin",
   },
   {
     name: "Email",
     alias: "ridwanmuhraihan@gmail.com",
     url: "mailto:ridwanmuhraihan@gmail.com",
+    icon: "email",
   },
   {
-    name: "Whatsapp",
+    name: "WhatsApp",
     alias: "+62 857-9351-6167",
     url: "https://wa.me/6285793516167",
+    icon: "whatsapp",
   },
   {
     name: "Instagram",
     alias: "@ridwanmuhr_",
     url: "https://instagram.com/ridwanmuhr_",
+    icon: "instagram",
   },
 ];

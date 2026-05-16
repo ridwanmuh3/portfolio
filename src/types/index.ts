@@ -13,4 +13,5 @@ export interface ConnectLinkObj {
   name: string;
   alias: string;
   url: string;
+  icon: "github" | "linkedin" | "email" | "whatsapp" | "instagram";
 }

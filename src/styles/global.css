@@ -1,20 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-google: "Google Sans", sans-serif;
-  --color-black: #202124;
-  --color-grey: #9aa0a6;
-  --color-light-grey: #f1f3f4;
+  --color-primary: #150f23;
+  --color-ink: #1f1633;
+  --color-ink-soft: #3f3849;
+  --color-accent-lime: #c2ef4e;
+  --color-accent-pink: #fa7faa;
+  --color-accent-violet: #6a5fc1;
+  --color-accent-violet-deep: #422082;
+  --color-canvas: #1f1633;
+  --color-surface: #ffffff;
+  --color-muted: #bdb8c0;
+  --color-focus: #9dc1f5;
+  --font-sans:
+    Rubik, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
-.bg-mesh {
-  background-color: #f1f3f4;
-  background-image:
-    radial-gradient(at 20% 0%, hsla(236, 77%, 74%, 0.35) 0%, transparent 50%),
-    radial-gradient(at 54% 1%, hsla(186, 77%, 74%, 0.35) 0%, transparent 60%),
-    radial-gradient(at 96% 11%, hsla(127, 77%, 74%, 0.35) 0%, transparent 27%);
-  filter: blur(60px);
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    background: #1f1633;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid #9dc1f5;
+    outline-offset: 4px;
+  }
+}
+
+@layer components {
+  .background-mesh {
+    position: absolute;
+    inset: -18%;
+    background:
+      linear-gradient(115deg, rgba(194, 239, 78, 0.22) 0%, transparent 32%),
+      linear-gradient(245deg, rgba(250, 127, 170, 0.18) 8%, transparent 42%),
+      conic-gradient(
+        from 220deg at 50% 50%,
+        rgba(106, 95, 193, 0.55),
+        rgba(31, 22, 51, 0.2),
+        rgba(194, 239, 78, 0.2),
+        rgba(250, 127, 170, 0.24),
+        rgba(66, 32, 130, 0.5)
+      );
+    filter: blur(22px) saturate(1.16);
+    opacity: 0.86;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .background-mesh::after {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.06) 0 1px,
+        transparent 1px 120px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.05) 0 1px,
+        transparent 1px 120px
+      );
+    content: "";
+    mix-blend-mode: overlay;
+  }
+
+  .background-mesh-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-position: 0 0;
+    background-size: 72px 72px;
+    mask-image: radial-gradient(
+      ellipse at center,
+      black 0%,
+      black 42%,
+      transparent 72%
+    );
+    opacity: 0.22;
+    will-change: background-position;
+  }
+
+  [data-header],
+  [data-hero-card],
+  [data-hero-stagger],
+  [data-reveal],
+  [data-section-heading] {
+    will-change: opacity, transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .background-mesh,
+    .background-mesh-grid,
+    [data-header],
+    [data-hero-card],
+    [data-hero-stagger],
+    [data-reveal],
+    [data-section-heading] {
+      transform: none !important;
+      transition: none !important;
+      will-change: auto;
+    }
+  }
 }
