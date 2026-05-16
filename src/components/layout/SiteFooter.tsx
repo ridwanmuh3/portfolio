@@ -9,8 +9,8 @@ export function SiteFooter() {
       className="mt-24 flex items-center justify-between gap-6 border-t border-white/15 pt-6 max-md:flex-col max-md:items-start max-md:gap-4"
     >
       <p className="text-sm text-muted">
-        &copy; {new Date().getFullYear()} {profile.name}. Built with Bun, React,
-        and Vite.
+        &copy; {new Date().getFullYear()} {profile.name}. Built with
+        Resilience❤️‍🩹
       </p>
       <ul
         className="flex flex-wrap justify-end gap-2 max-md:justify-start"
